@@ -1,6 +1,7 @@
-# RTE
+# loga 🔥
 
-Rust Text Editor
+"*Blazing Fast*" Tauri Text Editor
+> that's a joke btw
 
 Let's make a vscode killer with Rust! (and react can help too)
 
