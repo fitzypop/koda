@@ -1,4 +1,4 @@
-# loga 🔥
+# koda 💻
 
 "*Blazing Fast*" Tauri Text Editor
 > that's a joke btw

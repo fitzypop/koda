@@ -7,7 +7,7 @@
     "withGlobalTauri": false
   },
   "package": {
-    "productName": "loga",
+    "productName": "koda",
     "version": "0.0.1"
   },
   "tauri": {
@@ -40,7 +40,7 @@
       {
         "fullscreen": false,
         "resizable": true,
-        "title": "loga",
+        "title": "koda",
         "width": 800,
         "height": 600
       }
