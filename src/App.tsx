@@ -12,6 +12,8 @@ function App() {
     setGreetMsg(await invoke("greet", { name: name() }));
   }
 
+  // let rwd = invoke('rust_pwd').then(v => v);
+
   return (
     <div class="container">
       <h1>Welcome to Tauri!</h1>
@@ -43,7 +45,10 @@ function App() {
         </div>
       </div>
 
+      {/* <p>{rwd}</p> */}
+
       <p>{greetMsg}</p>
+
     </div>
   );
 }
