@@ -6,13 +6,14 @@ import "./App.css";
 function App() {
   const [greetMsg, setGreetMsg] = createSignal("");
   const [name, setName] = createSignal("");
+  const [rwd, setRwd] = createSignal("");
+
+  invoke('rust_pwd').then(r => setRwd(r as string)) // FUCK YEAH SOLID!!
 
   async function greet() {
     // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
     setGreetMsg(await invoke("greet", { name: name() }));
   }
-
-  // let rwd = invoke('rust_pwd').then(v => v);
 
   return (
     <div class="container">
@@ -45,7 +46,7 @@ function App() {
         </div>
       </div>
 
-      {/* <p>{rwd}</p> */}
+      <p>{rwd}</p>
 
       <p>{greetMsg}</p>
 
