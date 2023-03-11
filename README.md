@@ -4,11 +4,11 @@ Rust Text Editor
 
 Let's make a vscode killer with Rust! (and react can help too)
 
-## Tauri + React + Typescript
-
-This template should help get you started developing with Tauri, React and Typescript in Vite.
-
 Using node 18.15.0, pnpm 7.29.1, built from `create-tauri-app` 3.1.2
+
+## Tauri + Solid + Typescript
+
+This template should help get you started developing with Tauri, Solid and Typescript in Vite.
 
 ## Recommended IDE Setup
 
