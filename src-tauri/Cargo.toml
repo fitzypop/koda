@@ -3,7 +3,7 @@ name = "koda"
 version = "0.0.1"
 description = "Tauri Text Editos"
 authors = ["you"]
-license = ""
+license = "MIT"
 repository = ""
 edition = "2021"
 

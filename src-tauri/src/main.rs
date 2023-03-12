@@ -3,10 +3,25 @@
 
 use rusqlite::Connection;
 
+fn main() {
+    // TODO How do I open files relative to home and or XDG?
+    // let conn = Connection::open("$HOME/.cache/db.db").expect("sqlite fail");
+
+    tauri::Builder::default()
+        .invoke_handler(tauri::generate_handler![greet, rust_pwd, open_devtools])
+        .run(tauri::generate_context!())
+        .expect("error while running tauri application");
+}
+
+#[tauri::command]
+fn open_devtools(window: tauri::Window) {
+    window.open_devtools();
+}
+
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
 fn greet(name: &str) -> String {
-    dbg!(name);
+    // dbg!(name);
     format!("Hello, {}! You've been greeted from Rust!", name)
 }
 
@@ -14,16 +29,6 @@ fn greet(name: &str) -> String {
 #[tauri::command]
 fn rust_pwd() -> String {
     let pdir = std::env::current_dir().unwrap();
-    dbg!(&pdir);
+    // dbg!(&pdir);
     pdir.into_os_string().into_string().unwrap()
-}
-
-fn main() {
-    // TODO How do I open files starting from $HOME ?
-    // let conn = Connection::open("$HOME/.cache/db.db").expect("sqlite fail");
-
-    tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![greet, rust_pwd])
-        .run(tauri::generate_context!())
-        .expect("error while running tauri application");
 }
