@@ -10,6 +10,10 @@ export function Container(props) {
   );
 }
 
+export function Row(props) {
+  return <div class="flex justify-center">{props.children}</div>;
+}
+
 export default function App() {
   const [greetMsg, setGreetMsg] = createSignal("");
   const [name, setName] = createSignal("");
@@ -25,11 +29,11 @@ export default function App() {
       <Container>
         <h1>Welcome to Tauri!</h1>
 
-        <div class="row">
+        <Row>
           <p>Current working directory for rust 'backend': {rwd()}</p>
-        </div>
+        </Row>
 
-        <div class="row">
+        <Row>
           <div>
             <input
               id="greet-input"
@@ -40,11 +44,11 @@ export default function App() {
               Greet
             </button>
           </div>
-        </div>
+        </Row>
 
-        <div class="row">
+        <Row>
           <p>{greetMsg()}</p>
-        </div>
+        </Row>
 
         <EditorWindow />
       </Container>
