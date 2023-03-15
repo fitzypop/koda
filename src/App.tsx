@@ -1,16 +1,16 @@
-import { Component, createSignal } from "solid-js";
+import { createSignal, ParentProps } from "solid-js";
 // import logo from "./assets/logo.svg";
 import { invoke } from "@tauri-apps/api/tauri";
 import EditorWindow from "./components/editor";
 import { rwd } from "./stores/state";
 
-export function Container(props) {
+export function Container(props: ParentProps) {
   return (
     <div class="flex flex-col justify-center text-center">{props.children}</div>
   );
 }
 
-export function Row(props) {
+export function Row(props: ParentProps) {
   return <div class="flex justify-center">{props.children}</div>;
 }
 
@@ -24,8 +24,9 @@ export default function App() {
     // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
     setGreetMsg(await invoke("greet", { name: name() }));
   }
+
   return (
-    <div class="pt-5 m-0">
+    <div class="m-0 pt-5">
       <Container>
         <h1>Welcome to Tauri!</h1>
 
