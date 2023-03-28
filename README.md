@@ -19,5 +19,5 @@ This template should help get you started developing with Tauri, Solid and Types
 
 - clone repo
 - install packages `pnpm install`
+- install tauri-cli: `cargo install tauri-cli`
 - run dev app `cargo tauri dev`
-  - need tauri-cli: `cargo install tauri-cli`
